@@ -24,6 +24,7 @@ app.post("/events", (req, res) => {
   axios.post("http://localhost:4003/events", event).catch((error) => {
     console.log(err.message);
   });
+<<<<<<< HEAD
   /*
   if(it is not 1am){
       axios.post("http://2932.34.4.324.5:4006/events", event).catch((error) => {
@@ -34,6 +35,8 @@ app.post("/events", (req, res) => {
   });
   }
   */
+=======
+>>>>>>> main
 
   res.send({ status: "OK" });
 });
