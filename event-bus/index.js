@@ -12,16 +12,16 @@ app.post("/events", (req, res) => {
 
   events.push(event);
 
-  axios.post("http://posts-clusterir-srv:4000/events", event).catch((error) => {
+  axios.post("http://posts-clusterip-srv:4000/events", event).catch((error) => {
     console.log(err.message);
   });
-  axios.post("http://comments-svr:4001/events", event).catch((error) => {
+  axios.post("http://comments-srv:4001/events", event).catch((error) => {
     console.log(err.message);
   });
-  axios.post("http://query-svr:4002/events", event).catch((error) => {
+  axios.post("http://query-srv:4002/events", event).catch((error) => {
     console.log(err.message);
   });
-  axios.post("http://moderation-svr:4003/events", event).catch((error) => {
+  axios.post("http://moderation-srv:4003/events", event).catch((error) => {
     console.log(err.message);
   });
 

@@ -1,30 +1,30 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: moderation-depl
+  name: client-depl
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: moderation
+      app: client
   template:
     metadata:
       labels:
-        app: moderation
+        app: client
     spec:
       containers:
-        - name: moderation
-          image: momirtum/moderation
+        - name: client
+          image: momirtum/client
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: moderation-srv
+  name: client-srv
 spec:
   selector:
-    app: moderation
+    app: client
   ports:
-    - name: moderation
+    - name: client
       protocol: TCP
-      port: 4003
-      targetPort: 4003
+      port: 3000
+      targetPort: 3000
