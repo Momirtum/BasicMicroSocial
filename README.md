@@ -5,7 +5,7 @@ Basic social application using Docker, Kubernetes and Microservices.
 
 -   [Docker](https://www.docker.com/get-started)
 -   [Kubernetes](https://docs.docker.com/desktop/kubernetes)
--   [Nginex](https://kubernetes.github.io/ingress-nginx/deploy/#quick-start)
+-   [Nginx](https://kubernetes.github.io/ingress-nginx/deploy/#quick-start)
 -   [Skaffold](https://skaffold.dev/)
 
 ## How To Start The Project
